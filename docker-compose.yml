@@ -1,0 +1,19 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - "8080:8080"
+    links:
+      - mongo:mongo 
+  mongo:
+    image: mongo:latest
+    ports:
+    - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=manager
+    volumes:
+      - /tmp/mongo-data:/data/db
