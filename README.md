@@ -7,3 +7,9 @@ _**This project is still in development.**_
 
 - NoSQL DB: Mongo
 - Echo for web server
+
+### Next steps in this project
+- [ ] CRUD Operations for tasks
+- [ ] Seed database 
+- [ ] Migration template 
+- [ ] User entity
